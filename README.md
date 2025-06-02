@@ -30,7 +30,7 @@ Scriptul SQL de creare a tabelelor și inserare a datelor inițiale se găsește
 - Aplicația permite adăugarea, ștergerea, modificarea și afișarea de date pentru fiecare entitate.
 - Operațiile sunt evidențiate prin opțiunile disponibile în meniul interactiv din consolă.
 
-✔️ **Servicii Singleton si Interogări și operații CRUD** :
+✔️ **Servicii Singleton** :
 - Am structurat serviciile responsabile de operații CRUD pentru fiecare entitate (Carte, Autor, Editura, Sectiune) astfel încât să existe o singură instanță a fiecăruia în aplicație, pentru a gestiona eficient interacțiunile cu baza de date.
 
 ✔️ **Logarea acțiunilor**:
