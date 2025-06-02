@@ -1,4 +1,4 @@
-# 📚 Biblioteca — Java & PostgreSQL
+# 📚 Aplicație de Gestiune Bibliotecă
 
 ## Descriere proiect 📖
 
