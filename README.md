@@ -33,8 +33,6 @@ Scriptul SQL de creare a tabelelor și inserare a datelor inițiale se găsește
 ✔️ **Servicii Singleton si Interogări și operații CRUD** :
 - Am structurat serviciile responsabile de operații CRUD pentru fiecare entitate (Carte, Autor, Editura, Sectiune) astfel încât să existe o singură instanță a fiecăruia în aplicație, pentru a gestiona eficient interacțiunile cu baza de date.
 
-✔️ **Citirea și scrierea datelor în/din fișiere CSV** pentru backup și restaurare.  
-
 ✔️ **Logarea acțiunilor**:
 - Toate acțiunile efectuate de utilizator prin meniul interactiv sunt înregistrate într-un fișier CSV, împreună cu momentul în care au avut loc. Această funcționalitate ajută la urmărirea activităților din aplicație.
 
