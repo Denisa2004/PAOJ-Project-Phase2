@@ -18,7 +18,7 @@ The SQL script for table creation and initial data insertion can be found in the
 
 ---
 
-## Implemented Features — Stage 2 ✅
+## Implemented Features — Phase 2 ✅
 
 ✔️ **Database Connection**:
 - The application uses a JDBC connection to PostgreSQL, managed centrally by a dedicated class (in the db folder).
