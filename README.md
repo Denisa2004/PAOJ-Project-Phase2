@@ -1,48 +1,48 @@
-# 📚 Aplicație de Gestiune Bibliotecă
+# 📚 Library Management System
 
-## Descriere proiect 📖
+## Project Description 📖
 
-Acest proiect reprezintă o aplicație de gestiune a unei biblioteci, dezvoltată în Java utilizând o bază de date PostgreSQL. Proiectul permite administrarea informațiilor despre cărți, autori, edituri și secțiuni ale bibliotecii si interactiune cu utilizatorul in consola. Interacțiunea cu baza de date se realizează prin JDBC, iar datele persistă în PostgreSQL.
-
----
-
-## Structura bazei de date 🗄️
-
-Tabele:
-- **carte** (id, titlu, autor_id, gen, an, sectiune_id, editura_id, stoc)
-- **autor** (id, nume, email, telefon, nationalitate, an_nastere, numar_carti)
-- **editura** (id, nume, oras, an_infiintare)
-- **sectiune** (id, nume, locatie, capacitate)
-
-Scriptul SQL de creare a tabelelor și inserare a datelor inițiale se găsește în folderul `sql/`, fișierul `database_setup.sql`.
+This project is a library management system developed in Java using a PostgreSQL database. The project allows for the management of information about books, authors, publishers, and library sections, with user interaction handled via the console. Database interaction is performed via JDBC, and all data is persisted in PostgreSQL.
 
 ---
 
-## Funcționalități implementate — Etapa a 2-a ✅
+## Database Structure 🗄️
 
-✔️ **Conectare la baza de date**:
-- Aplicația folosește o conexiune JDBC la PostgreSQL, gestionată centralizat printr-o clasă dedicată (in folderul db).
+Tables:
+- **book** (id, title, author_id, genre, year, section_id, publisher_id, stock)
+- **author** (id, name, email, phone, nationality, birth_year, book_count)
+- **publisher** (id, name, city, founding_year)
+- **section** (id, name, location, capacity)
 
-✔️ **Creare și populare tabele**:
-- Tabelele necesare au fost create și populate în pgAdmin, pe baza unui script SQL (fișier separat pentru a putea fi rulat rapid pe o altă instanță de bază de date dacă e nevoie).
+The SQL script for table creation and initial data insertion can be found in the `sql/` folder, in the `database_setup.sql` file.
 
-✔️ **Interogări și operații CRUD**:
-- Aplicația permite adăugarea, ștergerea, modificarea și afișarea de date pentru fiecare entitate.
-- Operațiile sunt evidențiate prin opțiunile disponibile în meniul interactiv din consolă.
+---
 
-✔️ **Servicii Singleton** :
-- Am structurat serviciile responsabile de operații CRUD pentru fiecare entitate (Carte, Autor, Editura, Sectiune) astfel încât să existe o singură instanță a fiecăruia în aplicație, pentru a gestiona eficient interacțiunile cu baza de date.
+## Implemented Features — Stage 2 ✅
 
-✔️ **Logarea acțiunilor**:
-- Toate acțiunile efectuate de utilizator prin meniul interactiv sunt înregistrate într-un fișier CSV, împreună cu momentul în care au avut loc. Această funcționalitate ajută la urmărirea activităților din aplicație.
+✔️ **Database Connection**:
+- The application uses a JDBC connection to PostgreSQL, managed centrally by a dedicated class (in the db folder).
 
-✔️ **Relații între entități**:
-- Am asigurat corect relațiile între tabele (cartea are autor, editură și secțiune asociate) atât la nivel de baze de date, cât și în aplicație.
+✔️ **Table Creation and Population**:
+- The required tables were created and populated in pgAdmin, based on an SQL script (provided as a separate file so it can be run quickly on other database instances if needed).
 
-✔️ **Meniu interactiv în consolă** pentru accesarea funcționalităților:
-- Afișare, adaugare, stergere cărți
-- Cautare carte dupa titlu
-- Modificare titlu
-- Actualizare autori / edituri / secțiuni etc.
+✔️ **CRUD Operations and Queries**:
+- The application allows adding, deleting, modifying (updating), and displaying data for each entity.
+- These operations are exposed through the options available in the interactive console menu.
+
+✔️ **Singleton Services**:
+- We structured the services responsible for CRUD operations for each entity (Book, Author, Publisher, Section) as Singletons, ensuring only one instance of each exists in the application to efficiently manage database interactions.
+
+✔️ **Action Logging**:
+- All actions performed by the user via the interactive menu are logged to a CSV file, along with a timestamp. This functionality helps in tracking application activity.
+
+✔️ **Entity Relationships**:
+- We correctly ensured the relationships between tables (a book has an associated author, publisher, and section) at both the database level and within the application.
+
+✔️ **Interactive Console Menu** for accessing features:
+- Display, add, delete books
+- Search book by title
+- Modify (Update) title
+- Update authors / publishers / sections, etc.
 
 ---
